@@ -48,21 +48,21 @@ end
 
 
 
-select dbo.FormattedPhone(Phone) as Telefon from dbo.calisanlar --select Function_adı(kolon adı) from tablo adı 
+select dbo.FormattedPhone(Phone) as Telefon from dbo.calisanlar --select Function_adÃ½(kolon adÃ½) from tablo adÃ½ 
 
 select Calisan_id,Calisan_adi,
-dbo.FormattedPhone(Phone) as 'Telefon formati',--Telefon format Fonksiyonunu çağırdık
-year(getdate())-Year(D_tarih) as  yas--yası yazdırmak için kolon hesabı yaptık 
+dbo.FormattedPhone(Phone) as 'Telefon formati',--Telefon format Fonksiyonunu Ã§aÃ°Ã½rdÃ½k
+year(getdate())-Year(D_tarih) as  yas--yasÃ½ yazdÃ½rmak iÃ§in kolon hesabÃ½ yaptÃ½k 
 from calisanlar 
-where YEAR(getdate())-year(D_tarih)<40--40 yaşında küçük olma şartı
-and Calisan_id Between 2 and 5-- between ile calisan_id 2 ve 5 arasında olanları getirdik
+where YEAR(getdate())-year(D_tarih)<40--40 yaÃ¾Ã½nda kÃ¼Ã§Ã¼k olma Ã¾artÃ½
+and Calisan_id Between 2 and 5-- between ile calisan_id 2 ve 5 arasÃ½nda olanlarÃ½ getirdik
 
                                  --2.
-DECLARE @mail99 NVARCHAR(MAX) ,--Declare ile değişkenleri tanımlıyoruz
-@isim NVARCHAR(MAX) = 'semih',
-@soyisim NVARCHAR(MAX)= 'senturk',
+DECLARE @mail99 NVARCHAR(MAX) ,--Declare ile deÃ°iÃ¾kenleri tanÃ½mlÃ½yoruz
+@isim NVARCHAR(MAX) = 'xxxx',
+@soyisim NVARCHAR(MAX)= 'xxxx',
 @domain NVARCHAR(MAX)= '@bilgeadam.com';
-SET @mail99=@isim+'.'+@soyisim+@domain;--daha sonra değişkeni set ediyoruz
-PRINT @mail99 ;--print ile istediğimiz değişkeni yazdırabiliriz
+SET @mail99=@isim+'.'+@soyisim+@domain;--daha sonra deÃ°iÃ¾keni set ediyoruz
+PRINT @mail99 ;--print ile istediÃ°imiz deÃ°iÃ¾keni yazdÃ½rabiliriz
 
 
